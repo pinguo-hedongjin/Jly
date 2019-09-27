@@ -1,0 +1,9 @@
+apply plugin: 'com.android.library'
+apply from: "$gradle_root/base_config.gradle"
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':jly:annotation')
+    api project(':room:runtime')
+    api deps.room.rxjava2
+}
